@@ -9,11 +9,11 @@ def home():
 
 @app.route("/case1")
 def case1():
-    return render_template("case1.html")
+    return render_template("index1.html")
 
 @app.route("/case2")
 def case2():
-    return render_template("case2.html")
+    return render_template("index2.html")
 
 
 if __name__=="__main__": #如果以主程式執行
