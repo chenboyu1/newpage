@@ -1,4 +1,19 @@
 <html>
+<HEAD>
+  <SCRIPT LANGUAGE="JavaScript">
+      function rand()
+      {
+          var now=new Date()
+          var num=(now.getSeconds())%10
+          var num=num+1
+          if (num > 5) {
+                window.location.href = 'page1.html';
+            } else {
+                window.location.href = 'page2.html';
+            }
+      }
+  </SCRIPT>
+</head>
   <body>
     <h1>開始塔羅</h1>
     <p>請按下洗牌按鈕</p><br>
