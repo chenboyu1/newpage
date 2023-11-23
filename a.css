@@ -1,6 +1,38 @@
 /* Desktop - 1 */
 
 /* Auto layout */
+button1{
+    background-color:#0c3478;
+    color:#fff;
+    border:0;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button1:hover{
+    color:#e8f1ff;
+    background-color:#fff;
+    border:2px #003C9D solid;
+}
+.b1{
+    position:absolute;            
+     top:180px;             
+     left:470px;
+    display: block;
+}
+
+.b2{
+    position:absolute;            
+     top:180px;             
+     left:900px;
+    display: block;
+}
+.b3{
+    position:absolute;            
+     top:180px;             
+     left:1330px;
+    display: block;
+}
 .backg{
     display: flex;
     flex-direction: column;
@@ -107,14 +139,14 @@
 
     
 .rotateEffect {
-    animation: rotateAnimation 1s infinite linear; /* 旋轉效果，根據需要更改角度 */
+    animation: rotateAnimation 1s 2 alternate linear; /* 旋轉效果，根據需要更改角度 */
 }
 @keyframes rotateAnimation {
     from {
       transform: rotate(0deg);
     }
     to {
-      transform: rotate(350deg);
+      transform: rotate(360deg);
     }
 }
 .rt:nth-child(1) {

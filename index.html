@@ -9,6 +9,15 @@
         <div class="up">
            <div class="logo">
             <img src="C:\Users\沈思安\Downloads\logo.jpg">
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b1 style = width:141px;height:54px;background-color:rgb(32,131,217);flex:105rem;>
+                塔羅介紹
+            </button>
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b2 style = width:141px;height:54px;background-color:rgb(32,131,217);flex:105rem;>
+                歷史
+            </button>
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b3 style = width:141px;height:54px;background-color:rgb(32,131,217);flex:105rem;>
+                關於我們
+            </button>
             </div>
         </div>
     </header>
@@ -35,9 +44,9 @@
                 <div class="rt"></div>
                 <div class="rt"></div>
                 <div class="rt"></div>
-            </div><button type="button" id="Button" class="button">選好了</button>
+            </div><button type="button" id="Button" class="button">選好了</button><br>
             <div class="block">
-                <p style="color: aliceblue; font-size: 30;">只能抽取三張牌!!</p>
+                <p style="color: aliceblue; font-size: 30;">只能選三張牌，多餘的牌請再點一下放回牌面</p>
                 <div class="block9"></div>
             </div>
                 
@@ -83,10 +92,19 @@
                     else
                     {
                         $('.rt').toggleClass('rotateEffect');
-                        $('.block11').hi
+                        $('.block11').hi          
+                        setTimeout(function(){
+                            var now=new Date()
+                            var num=(now.getSeconds())%10
+                            var num=num+1
+                            if (num > 5) {
+                                window.location.href = 'study1.html';
+                            } else {
+                                window.location.href = 'study2.html';
+                            }
+                        }, 2000)              
                     }
                 });
-                
                
             });
           </script>
