@@ -4,6 +4,17 @@
         <meta charset = "utf-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <style type = "text/css">
+            @media screen and(min-width:769px){
+                h1{
+                    width:31.333%;
+                    float: left;
+                    margin: 0 1%;
+                }
+
+                footer{
+                    clear:left;
+                }
+            }
             /*背景*/
             body{
                 font-family: Arial, sans-serif;
@@ -24,9 +35,11 @@
                 flex-shrink: 0;
                 background-color: #fbfbfb;
                 opacity: 0.9;
+                width: 1920px;
+                height: 250px;
            }
             /*按鈕特效*/
-            buttom{
+            button{
                 background-color:#0c3478;
                 color:#fff;
                 border:0;
@@ -44,32 +57,69 @@
                 display: block;
                 border-radius: 8px;
                 background: rgba(167, 74, 238, 0.5);
-                width: 700px;
+                width: 1000px;
                 height: 652px;
                 flex-shrink: 0;
-                margin-left: 400px;
+                margin-left: 460px;
                 border-radius: 8px;
             }
+            .b1{
+                position:absolute;            
+                 top:180px;             
+                 left:470px;
+                display: block;
+            }
 
-        
+            .b2{
+                position:absolute;            
+                 top:180px;             
+                 left:900px;
+                display: block;
+            }
+            .b3{
+                position:absolute;            
+                 top:180px;             
+                 left:1330px;
+                display: block;
+            }
+            .one{
+                position:absolute;            
+                 top:850px;             
+                 left:670px;
+                display: block;
+            }
+            .two{
+                position:absolute;            
+                 top:850px;             
+                 left:1070px;
+                display: block; 
+            }
+            .three{
+                position:absolute;            
+                 top:850px;             
+                 left:870px;
+                display: block;
+            }
         </style>
     </head>
 
     <body>
         <header> 
-            <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg">
-            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" style = width:141px;height:54px;background-color:rgb(32,131,217);flex:105rem;>
+            <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" style = width:150px;position:absolute;top:50px;left:50px;>
+        </header>
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b1 style = width:141px;height:54px;background-color:rgb(32,131,217);flex:105rem;>
                 塔羅介紹
             </button>
-            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" style = width:141px;height:54px;background-color:rgb(32,131,217);flex:105rem;>
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b2 style = width:141px;height:54px;background-color:rgb(32,131,217);flex:105rem;>
                 歷史
             </button>
-            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" style = width:141px;height:54px;background-color:rgb(32,131,217);flex:105rem;>
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b3 style = width:141px;height:54px;background-color:rgb(32,131,217);flex:105rem;>
                 關於我們
             </button>
-        </header>
+       
 
         <h1>
+             <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" style= position:absolute;top:280px;left:750px;display:block;width:458;height:231;>
             內容
             <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = one style = width:141px;height:54px;background-color:rgb(32,131,217);flex:105rem;>
                 每日
