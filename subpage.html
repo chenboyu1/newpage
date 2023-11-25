@@ -26,7 +26,16 @@
                 opacity: 0.9;
                 width: 100%;
                 height: 250px;
-           }
+            }
+            under{
+                display: block;
+                margin-left: 35%;
+                border-radius: 8px;
+                flex-shrink: 0;
+                opacity: 0.9;
+                width: 500px;
+                height: 250px;
+            }
             button{
                 background-color:#0c3478;
                 color:#fff;
@@ -85,8 +94,8 @@
                 height: 203px;
                 flex-shrink: 0;
                 display: block;
-                margin-top: 37px ;
-                margin-left: 450px;
+                margin-top: 5%;
+                margin-left: 10%;
                 border-radius: 8px;
                 text-align:center;
                 background: #d9d9d9cc;
@@ -112,7 +121,7 @@
                 width: 700px;
                 height: 652px;
                 flex-shrink: 0;
-                margin-left: 270px;
+                margin-left: -30%;
                 border-radius: 8px;
             }
             /*圖標*/
@@ -132,7 +141,7 @@
                 width:141px;
                 height:54px;
                 margin-top: -100px;
-                margin-left: 550px;
+                margin-left: 43%;
                 background-color:#fff;
                 color:#000000;
                 font-size:medium;
@@ -153,17 +162,17 @@
         <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b3 style = width:141px;height:54px;>
             關於我們
         </button>
-        <h1 style=font-family:DFKai-sb;>測驗結果</h1>
-        <div>
-            
+        
+        <under>
+            <h1 style=font-family:DFKai-sb;>測驗結果</h1>
             <h2 style=font-family:DFKai-sb;>
-                <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" style=display:block;position:relative;left:18%;top:10%;width:458;height:231;>
+                <input type = "image" src = "塔羅牌照片網址" style=display:block;position:relative;left:18%;top:10%;width:458;height:231;>
                 <p style = font-family:DFKai-sb;position:relative;left:10%;top:10%;>牌面名稱</p>
-		<p style = font-family:DFKai-sb;position:relative;left:10%;margin-right:20%;top:10%;>結果</p>
+                <p style = font-family:DFKai-sb;position:relative;left:10%;margin-right:20%;top:10%;>結果</p>           
+                <button type="button" value="連結名稱" class="again" onclick="location.href='要前往的網頁連結'" style=font-family:DFKai-sb;display:block;position:relative;top:20%;>
+                    回首頁
+                </button>
             </h2>
-            <button type="button" value="連結名稱" class="again" onclick="location.href='要前往的網頁連結'" style=font-family:DFKai-sb;>
-                回首頁
-            </button>
-        </div>
+        </under>
     </body>
 </html>
