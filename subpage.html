@@ -27,15 +27,7 @@
                 width: 100%;
                 height: 250px;
             }
-            under{
-                display: block;
-                margin-left: 35%;
-                border-radius: 8px;
-                flex-shrink: 0;
-                opacity: 0.9;
-                width: 500px;
-                height: 250px;
-            }
+
             button{
                 background-color:#0c3478;
                 color:#fff;
@@ -88,40 +80,17 @@
                 position: absolute;
                 color: white;
             }
-            /*標題欄+標題文字*/
-            h1{
-                width: 590px;
-                height: 203px;
-                flex-shrink: 0;
-                display: block;
-                margin-top: 5%;
-                margin-left: 10%;
-                border-radius: 8px;
-                text-align:center;
-                background: #d9d9d9cc;
-                color: #000000;
-                font-family: Inter;
-                font-size: 40px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                display: flex;
-                width: 352px;
-                height: 92px;
-                flex-direction: column;
-                justify-content: center;
-                flex-shrink: 0;
-                position: static;
-            }
+
             /*內文欄*/
             h2{
                 display: block;
                 border-radius: 8px;
                 background: rgba(217, 217, 217, 0.50);
-                width: 700px;
-                height: 652px;
+                width: 1200px;
+                height: 300px;
                 flex-shrink: 0;
-                margin-left: -30%;
+                position: relative;
+                left: 3%;
                 border-radius: 8px;
             }
             /*圖標*/
@@ -135,17 +104,41 @@
 				background-size:cover;
 				background-position: center;
             }
-            
-            /*再測一次*/
-            .again{
-                width:141px;
-                height:54px;
-                margin-top: -100px;
-                margin-left: 43%;
-                background-color:#fff;
-                color:#000000;
-                font-size:medium;
-                font-family: DFKai-sb;
+
+            .flip-container {
+                perspective: 231px;
+            }
+
+            .flip-card {
+                width: 150px;
+                height: 231px;
+                transform-style: preserve-3d;
+                transition: transform 0.5s;
+            }
+
+            .flip-card-inner {
+                width: 150;
+                height: 231;
+                transform-style: preserve-3d;
+            }
+
+            .flip-container:hover .flip-card {
+                transform: rotateY(180deg);
+            }
+
+            .flip-card-front,
+            .flip-card-back {
+                width: 150;
+                height: 231;
+                position: absolute;
+                backface-visibility: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .flip-card-back {
+                transform: rotateY(180deg);
             }
         </style>
     </head>
@@ -163,16 +156,442 @@
             關於我們
         </button>
         
-        <under>
-            <h1 style=font-family:DFKai-sb;>測驗結果</h1>
-            <h2 style=font-family:DFKai-sb;>
-                <input type = "image" src = "塔羅牌照片網址" style=display:block;position:relative;left:18%;top:10%;width:458;height:231;>
-                <p style = font-family:DFKai-sb;position:relative;left:10%;top:10%;>牌面名稱</p>
-                <p style = font-family:DFKai-sb;position:relative;left:10%;margin-right:20%;top:10%;>結果</p>           
-                <button type="button" value="連結名稱" class="again" onclick="location.href='要前往的網頁連結'" style=font-family:DFKai-sb;display:block;position:relative;top:20%;left:-2%;>
-                    回首頁
-                </button>
+        <script>
+            function flipButton() {
+                var flipContainer = document.querySelector('.flip-container');
+                flipContainer.classList.toggle('hover');
+            }
+        </script>
+            <h1 style=font-family:DFKai-sb;color:white;position:relative;left:40%;>牌面介紹:大阿爾克那</h1>
+            <h2 style=font-family:DFKai-sb;font-size:medium;>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:5%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:愚者<br>愚者是一位天真無邪的冒險家，即將展開一趟重要旅程。他抱持著滿腦子希望，是十足的理想主義，也非常不切實際。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:20%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/1.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br>作為地球與天堂的連通管道，魔術師代表了抉擇與創造，牌面上，魔術師的上方與下方皆是盛開的玫瑰與百合花，這告訴了我們，只要對自己熱愛的事物投注全部熱情，生命必能展露它的美好。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:35%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/2.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:女祭司<br>女祭司代表神聖女性法則：在古代，她代表女教皇、童女女祭司，她身上披著藍白相襯的長袍，就是這個身分的象徵。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:50%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/3.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:皇后<br>皇后是大地聖母的原型，是創造力與豐盛的象徵。她的盾牌上有一個金星符號，在占星學上對應金星，而其同源字「Venus」維納斯，就是羅馬神祇中掌管愛情的女神。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:65%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/4.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:皇帝<br>皇帝是父親的原型，男性權力與陽剛氣概的一個象徵。他的鬍鬚顯示出他是一位成熟而有智慧的男人，也是塔羅牌中另一位蓄鬍人士〈隱者〉的前導人物。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:80%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/5.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:教皇<br>教皇牌面上，呈現的是一位正統宗教人物。他頭上戴著皇冠，手中握著權杖，為兩位跪在他面前的求道者做出賜福的手勢。他是天主教信仰的領袖，象徵團結一體。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
             </h2>
-        </under>
+            <h2 style=font-family:DFKai-sb;font-size:medium;>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:5%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/6.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:戀人<br>在伊甸園中，一切看似完美，但夏娃與亞當才剛開始要相互認識，一起學會「愛」的課題。自此，我們知道蛇會引誘夏娃吃知識果，而這對戀人的關係，將從此改變。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:20%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/7.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:戰車<br>他的身後是城堡與護城河，他即將動身出發；帶著堅毅的決心與自制力，駕著戰車持續前進，成功達成他的任務。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:35%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/8.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:力量<br>獅子代表激情與本能，女性則代表文明禮教，儘管她身處險境，依然無所畏懼。她心平氣和地與獅子溝通；並沒有否認獅子的兇猛力量。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:50%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/9.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:65%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:80%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+            </h2>
+            <h2 style=font-family:DFKai-sb;font-size:medium;>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:5%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:愚者(The Fool)<br>愚者是一位天真無邪的冒險家，即將展開一趟重要旅程。他抱持著滿腦子希望，是十足的理想主義，也非常不切實際。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:20%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/1.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br>一手高舉魔法權杖，身前桌面上擺放著他的四樣魔術道具，也就是四個小秘儀/小阿爾克那的象徵物品：權杖、寶劍、聖杯與錢幣，並代表著四大元素。他試圖運用這些基本材料，創造出第五個元素——乙太，也就是神話學中的「眾神之息」(Breath of the gods)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:35%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:50%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:65%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:80%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+            </h2>
+            <h2 style=font-family:DFKai-sb;font-size:medium;>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:5%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:愚者(The Fool)<br>愚者是一位天真無邪的冒險家，即將展開一趟重要旅程。他抱持著滿腦子希望，是十足的理想主義，也非常不切實際。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:20%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/1.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br>一手高舉魔法權杖，身前桌面上擺放著他的四樣魔術道具，也就是四個小秘儀/小阿爾克那的象徵物品：權杖、寶劍、聖杯與錢幣，並代表著四大元素。他試圖運用這些基本材料，創造出第五個元素——乙太，也就是神話學中的「眾神之息」(Breath of the gods)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:35%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:50%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:65%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:80%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+            </h2>
+            <h2 style=font-family:DFKai-sb;font-size:medium;>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:5%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:愚者(The Fool)<br>愚者是一位天真無邪的冒險家，即將展開一趟重要旅程。他抱持著滿腦子希望，是十足的理想主義，也非常不切實際。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:20%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/1.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br>一手高舉魔法權杖，身前桌面上擺放著他的四樣魔術道具，也就是四個小秘儀/小阿爾克那的象徵物品：權杖、寶劍、聖杯與錢幣，並代表著四大元素。他試圖運用這些基本材料，創造出第五個元素——乙太，也就是神話學中的「眾神之息」(Breath of the gods)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:35%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:50%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:65%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="flip-container" style=display:block;width:150;height:231;position:absolute;left:80%;top:10%>
+                    <b onclick="flipButton()">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                </div>
+                                <div class="flip-card-back">
+                                    <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+            </h2>
     </body>
 </html>
