@@ -4,26 +4,12 @@
         <meta charset = "utf-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <style type = "text/css">
-            @media screen and(min-width:769px){
-                h1{
-                    width:31.333%;
-                    float: left;
-                    margin: 0 1%;
-                }
-
-                footer{
-                    clear:left;
-                }
-            }
-            
             /*背景*/
             body{
-                width: 100%;
-                max-width: 960px; /* 可以限制最大寬度，以避免在大螢幕上過度擴展 */
                 font-family: Arial, sans-serif;
                 border-radius: 144px;
                 background-color: #5DB2BD;
-                background-image:url("https://i.imgur.com/BKVIXps.jpg");
+                background-image:url("https://i.imgur.com/9Zwb0fC.jpg");
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
@@ -38,8 +24,8 @@
                 flex-shrink: 0;
                 background-color: #fbfbfb;
                 opacity: 0.9;
-                width: 1920px;
-                height: 250px;
+                width: 100%;
+                height: 30%;
            }
             /*按鈕特效*/
             button{
@@ -64,77 +50,109 @@
                 display: block;
                 border-radius: 8px;
                 background: rgba(97, 87, 105, 0.5);
-                width: 1000px;
-                height: 652px;
+                width: 70%;
+                height: 100%;
                 flex-shrink: 0;
-                margin-left: 460px;
+                margin-left: 20%;
+                margin-top: 6%;
                 border-radius: 8px;
             }
             .b1{
-                position:absolute;            
-                 top:180px;             
-                 left:470px;
+                position:absolute; 
+                top:20%;                      
+                left:20%;
                 display: block;
+                width:12%;
+                height:8%;
+                background-color:#031d4c;
+                flex:105rem;
             }
 
             .b2{
-                position:absolute;            
-                 top:180px;             
-                 left:900px;
+                position:absolute; 
+                top:20%;                      
+                left:50%;
                 display: block;
+                width:12%;
+                height:8%;
+                background-color:#031d4c;
+                flex:105rem;
             }
             .b3{
-                position:absolute;            
-                 top:180px;             
-                 left:1330px;
+                position:absolute; 
+                top:20%;
+                left: 80%;
                 display: block;
+                width:12%;
+                height:8%;
+                background-color:#031d4c;
+                flex:105rem;
             }
             .one{
-                position:absolute;            
-                 top:850px;             
-                 left:670px;
+                position:absolute; 
+                top:100%;
+                left: 30%;
                 display: block;
+                width:10%;
+                height:8%;
+                background-color:#031d4c;
+                flex:105rem;
             }
             .two{
-                position:absolute;            
-                 top:850px;             
-                 left:1070px;
+                position:absolute; 
+                top:100%; 
+                left: 50%;
                 display: block; 
+                width:10%;
+                height:8%;
+                background-color:#031d4c;
+                flex:105rem;
             }
             .three{
-                position:absolute;            
-                 top:850px;             
-                 left:870px;
+                position:absolute; 
+                top:100%;
+                left: 70%;
                 display: block;
+                width:10%;
+                height:8%;
+                background-color:#031d4c;
+                flex:105rem;
+            }
+            .logo{
+                width:10%;
+                position:absolute;
+                top:5%;
+                left:5%;
+                background-size:cover;
             }
         </style>
     </head>
 
     <body>
         <header> 
-            <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" style = width:150px;position:absolute;top:50px;left:50px;>
-        </header>
-            <button type="button"value="連結名稱" onclick="location.href='塔羅牌介紹.html'" class = b1 style = width:141px;height:54px;background-color:#031d4c;flex:105rem;>
-                塔羅牌介紹
+            <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" class="logo">
+        
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b1>
+                塔羅介紹
             </button>
-            <button type="button"value="連結名稱" onclick="location.href='塔羅牌歷史.html'" class = b2 style = width:141px;height:54px;background-color:#031d4c;flex:105rem;>
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b2>
                 歷史
             </button>
-            <button type="button"value="連結名稱" onclick="location.href='關於我們.html'" class = b3 style = width:141px;height:54px;background-color:#031d4c;flex:105rem;>
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b3>
                 關於我們
             </button>
-       
+        </header>
 
         <h1>
-             <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" style= position:absolute;top:280px;left:750px;display:block;width:458;height:231;>
-            內容
-            <button type="button"value="抽牌頁面.html" onclick="location.href='抽牌頁面.html'" class = one style = width:141px;height:54px;background-color:#031d4c;flex:105rem;>
+            <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" style= display:block;position:relative;top:0%;left:20%;display:block;width:60%;height:40%;>/*left要根據width決定:left = (100%-width)/2 */
+            <p style=font-family:DFKai-sb;> 內容</p>
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = one>
                 每日
             </button>
-            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = two style = width:141px;height:54px;background-color:#031d4c;flex:105rem;>
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = two>
                 學業
             </button>
-            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = three style = width:141px;height:54px;background-color:#031d4c;flex:105rem;>
+            <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = three>
                 感情
             </button>
         </h1>
