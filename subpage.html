@@ -4,8 +4,184 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css">
         <style type="text/css">
-            
-            body { 
+            @media screen and (min-device-width: 1000px){
+                header{
+                    display: block;
+                    margin : 10px auto ;
+                    border-radius: 8px;
+                    flex-shrink: 0;
+                    background-color: #fbfbfb;
+                    opacity: 0.9;
+                    width: 100%;
+                    height: 30%;                  
+               }
+                h1{
+                    display: block;
+                    border-radius: 8px;
+                    background: rgba(97, 87, 105, 0.5);
+                    width: 40%;
+                    height: 20%;
+                    flex-shrink: 0;
+                    margin-left: 35%;
+                    margin-top: 3%;
+                    border-radius: 8px;
+                    font-family:DFKai-sb;
+                    color:#e8f1ff;
+                }
+    
+                h2{
+                    display: block;
+                    border-radius: 8px;
+                    background: rgba(97, 87, 105, 0.5);
+                    width: 70%;
+                    height: 130%;
+                    flex-shrink: 0;
+                    margin-left: 20%;
+                    margin-top: 6%;
+                    border-radius: 8px;
+                }
+                .b1{
+                    position:absolute; 
+                    top:20%;                      
+                    left:20%;
+                    display: block;
+                    width:12%;
+                    height:8%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+    
+                .b2{
+                    position:absolute; 
+                    top:20%;                      
+                    left:50%;
+                    display: block;
+                    width:12%;
+                    height:8%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+                .b3{
+                    position:absolute; 
+                    top:20%;
+                    left: 80%;
+                    display: block;
+                    width:12%;
+                    height:8%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+                .pic{
+                    display:block;
+                    position:relative;
+                    left:25%;
+                    top:10%;
+                    width:50%;
+                    height:35%;
+                }
+                /*再測一次*/
+                .again{
+                    position: relative;
+                    width:141px;
+                    height:54px;
+                    top: -20%;
+                    left: 48%;
+                    background-color:#fff;
+                    color:#000000;
+                    font-size:medium;
+                    font-family: DFKai-sb;
+                }
+            }
+            @media screen and (max-device-width: 1000px){
+                header{
+                    display: block;
+                    margin : 10px auto ;
+                    border-radius: 8px;
+                    flex-shrink: 0;
+                    background-color: #fbfbfb;
+                    opacity: 0.9;
+                    width: 100%;
+                    height: 20%;                  
+               }
+                h1{
+                    display: block;
+                    border-radius: 8px;
+                    background: rgba(97, 87, 105, 0.5);
+                    width: 40%;
+                    height: 10%;
+                    flex-shrink: 0;
+                    margin-left: 35%;
+                    margin-top: 3%;
+                    border-radius: 8px;
+                    font-family:DFKai-sb;
+                    color:#e8f1ff;
+                }
+    
+                h2{
+                    display: block;
+                    border-radius: 8px;
+                    background: rgba(97, 87, 105, 0.5);
+                    width: 80%;
+                    height: 50%;
+                    flex-shrink: 0;
+                    margin-left: 15%;
+                    margin-top: 6%;
+                    border-radius: 8px;
+                }
+                .b1{
+                    position:absolute; 
+                    top:15%;                      
+                    left:20%;
+                    display: block;
+                    width:15%;
+                    height:3%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+    
+                .b2{
+                    position:absolute; 
+                    top:15%;                      
+                    left:50%;
+                    display: block;
+                    width:15%;
+                    height:3%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+                .b3{
+                    position:absolute; 
+                    top:15%;
+                    left: 80%;
+                    display: block;
+                    width:15%;
+                    height:3%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+                .pic{
+                    display:block;
+                    position:relative;
+                    left:20%;
+                    top:10%;
+                    width:60%;
+                    height:30%;
+                }
+                /*再測一次*/
+                .again{
+                    position: relative;
+                    width:141px;
+                    height:54px;
+                    top: 80%;
+                    left: 48%;
+                    background-color:#fff;
+                    color:#000000;
+                    font-size:medium;
+                    font-family: DFKai-sb;
+                }
+            }
+            /*背景*/
+            body{
                 font-family: Arial, sans-serif;
                 border-radius: 144px;
                 background-color: #5DB2BD;
@@ -16,32 +192,15 @@
                 background-attachment: scroll;
                 font-size: 16px;
             }
-            /*頂端欄*/
-            header{
-                display: block;
-                margin : 10px auto ;
-                border-radius: 8px;
-                flex-shrink: 0;
-                background-color: #fbfbfb;
-                opacity: 0.9;
-                width: 100%;
-                height: 250px;
-            }
-            under{
-                display: block;
-                margin-left: 35%;
-                border-radius: 8px;
-                flex-shrink: 0;
-                opacity: 0.9;
-                width: 500px;
-                height: 250px;
-            }
+            /*按鈕特效*/
             button{
-                background-color:#0c3478;
+                background-color: #031d4c;
                 color:#fff;
                 border:0;
                 border-radius:10px;
                 cursor:pointer;
+                font-size: larger;
+                font-family: DFKai-sb;
             }
 
             button:hover{
@@ -51,128 +210,41 @@
                 outline: black solid thick;
                 cursor: pointer;
             }
-            .b1{
-                position:absolute;            
-                top:180px;             
-                left:20%;
-                display: block;
-                font-size: larger;
-                font-family: DFKai-sb;
-                background-color: #031d4c;
-                border-radius: 15px;
-                position: absolute;
-                color: white;
+            
+            .logo{
+                width:10%;
+                position:absolute;
+                top:5%;
+                left:5%;
+                background-size:cover;
             }
 
-            .b2{
-                position:absolute;            
-                top:180px;             
-                left:50%;
-                display: block;
-                font-size: larger;
-                font-family: DFKai-sb;
-                background-color: #031d4c;
-                border-radius: 15px;
-                position: absolute;
-                color: white;
-            }
-            .b3{
-                position:absolute;            
-                top:180px;             
-                left: 80%;
-                display: block;
-                font-size: larger;
-                font-family: DFKai-sb;
-                background-color: #031d4c;
-                border-radius: 15px;
-                position: absolute;
-                color: white;
-            }
-            /*標題欄+標題文字*/
-            h1{
-                width: 590px;
-                height: 203px;
-                flex-shrink: 0;
-                display: block;
-                margin-top: 5%;
-                margin-left: 10%;
-                border-radius: 8px;
-                text-align:center;
-                background: #d9d9d9cc;
-                color: #000000;
-                font-family: Inter;
-                font-size: 40px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                display: flex;
-                width: 352px;
-                height: 92px;
-                flex-direction: column;
-                justify-content: center;
-                flex-shrink: 0;
-                position: static;
-            }
-            /*內文欄*/
-            h2{
-                display: block;
-                border-radius: 8px;
-                background: rgba(217, 217, 217, 0.50);
-                width: 700px;
-                height: 652px;
-                flex-shrink: 0;
-                margin-left: -30%;
-                border-radius: 8px;
-            }
-            /*圖標*/
-            .logo{
-                width: 150px;
-                height: 150px;
-                flex-shrink: 0;
-                border-radius: 200px;
-                background: url("https://i.imgur.com/0pxgq0D.jpg"), lightgray 50% / cover no-repeat;
-                background-repeat: no-repeat;
-				background-size:cover;
-				background-position: center;
-            }
-            
-            /*再測一次*/
-            .again{
-                width:141px;
-                height:54px;
-                margin-top: -100px;
-                margin-left: 43%;
-                background-color:#fff;
-                color:#000000;
-                font-size:medium;
-                font-family: DFKai-sb;
-            }
         </style>
     </head>
     <body>
         <header>
-            <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" style = width:150px;position:absolute;top:50px;left:50px;>
+            <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" class="logo">
         </header>
-        <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b1 style = width:141px;height:54px;>
-            塔羅介紹
+        <button type="button"value="連結名稱" onclick="location.href='塔羅牌介紹.html'" class = b1>
+            塔羅牌介紹
         </button>
-        <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b2 style = width:141px;height:54px;>
-            歷史
+        <button type="button"value="連結名稱" onclick="location.href='塔羅歷史.html'" class = b2>
+            塔羅歷史
         </button>
-        <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b3 style = width:141px;height:54px;>
+        <button type="button"value="連結名稱" onclick="location.href='關於我們.html'" class = b3>
             關於我們
         </button>
         
         <under>
-            <h1 style=font-family:DFKai-sb;>測驗結果</h1>
+            <h1><p style=position:relative;left:35%;top:30%;font-size:100%;>測驗結果</p></h1>
             <h2 style=font-family:DFKai-sb;>
-                <input type = "image" src = "圖片地址" style=display:block;position:relative;left:18%;top:10%;width:458;height:231;>
-                <p style = font-family:DFKai-sb;position:relative;left:10%;top:10%;>三張牌名稱</p>
-                <p style = font-family:DFKai-sb;position:relative;left:10%;margin-right:20%;top:10%;>解說</p>           
-                <br><button type="button" value="連結名稱" class="again" onclick="location.href='要前往的網頁連結'" style=font-family:DFKai-sb;display:block;position:relative;top:20%;left:-2%;>
-                    回首頁
-                </button>
+                <input type = "image" src = "圖片網址" class="pic">
+                <p style = font-family:DFKai-sb;position:relative;left:10%;top:10%;color:#e8f1ff;>牌面-牌面-牌面</p>
+                <p style = font-family:DFKai-sb;position:relative;left:10%;margin-right:20%;top:10%;color:#e8f1ff;>解說</p>                           
             </h2>
+            <button type="button" value="連結名稱" class="again" onclick="location.href='index.html'">
+                回首頁
+            </button>
         </under>
     </body>
 </html>
