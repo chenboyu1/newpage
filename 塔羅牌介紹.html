@@ -4,28 +4,33 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css">
         <style type="text/css">
-            @media screen and(min-width:769px){
-                h1{
-                    width:31.333%;
-                    float: left;
-                    margin: 0 1%;
-                }
-
-                footer{
-                    clear:left;
-                }
-            }
-            body { 
-                font-family: Arial, sans-serif;
-                border-radius: 144px;
-                background-color: #5DB2BD;
-                background-image:url("https://i.imgur.com/9Zwb0fC.jpg");
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: cover;
-                background-attachment: scroll;
-                font-size: 16px;
-            }
+	@media screen and (min-device-width: 1200px){	
+		body { 
+		        font-family: Arial, sans-serif;
+		        border-radius: 144px;
+		        background-color: #5DB2BD;
+		        background-image:url("https://i.imgur.com/9Zwb0fC.jpg");
+		        background-repeat: no-repeat;
+		        background-position: center center;
+		        background-size: cover;
+		        background-attachment: scroll;
+		        font-size: 16px;
+		}
+	}
+	@media screen and (max-device-width: 700px){
+		body { 
+		        font-family: Arial, sans-serif;
+		        border-radius: 144px;
+		        background-color: #5DB2BD;
+		        background-image:url("https://i.imgur.com/9Zwb0fC.jpg");
+		        background-repeat: no-repeat;
+		        background-position: center center;
+		        background-size: cover;
+		        background-attachment: scroll;
+		        font-size: 16px;
+		}
+	}
+	
             /*頂端欄*/
             header{
                 display: block;
@@ -90,17 +95,15 @@
                 position: absolute;
                 color: white;
             }
-
-            /*內文欄*/
+		 /*內文欄*/
             h2{
                 display: block;
                 border-radius: 8px;
                 background: rgba(217, 217, 217, 0.50);
-                width: 1200px;
                 height: 300px;
                 flex-shrink: 0;
                 position: relative;
-                left: 3%;
+                width: 100%;
                 border-radius: 8px;
             }
             /*圖標*/
@@ -114,6 +117,79 @@
 				background-size:cover;
 				background-position: center;
             }
+	@media screen and (max-device-width: 1200px){
+		@media screen and (min-device-width: 700px){
+			body { 
+			        font-family: Arial, sans-serif;
+			        border-radius: 144px;
+			        background-color: #5DB2BD;
+			        background-image:url("https://i.imgur.com/9Zwb0fC.jpg");
+			        background-repeat: no-repeat;
+			        background-position: center center;
+			        background-size: 1400px;
+			        background-attachment: scroll;
+			        font-size: 16px;
+			}
+			header{
+		                display: block;
+		                margin : 10px auto ;
+		                border-radius: 8px;
+		                flex-shrink: 0;
+		                background-color: #fbfbfb;
+		                opacity: 0.9;
+		                width: 1100px;
+		                height: 250px;
+		        }
+			.b1{
+		                position:absolute;            
+		                top:180px;             
+		                left:300px;
+		                display: block;
+		                font-size: larger;
+		                font-family: DFKai-sb;
+		                background-color: #031d4c;
+		                border-radius: 15px;
+		                position: absolute;
+		                color: white;
+		            }
+		
+		            .b2{
+		                position:absolute;            
+		                top:180px;             
+		                left:600px;
+		                display: block;
+		                font-size: larger;
+		                font-family: DFKai-sb;
+		                background-color: #031d4c;
+		                border-radius: 15px;
+		                position: absolute;
+		                color: white;
+		            }
+		            .b3{
+		                position:absolute;            
+		                top:180px;             
+		                left: 900px;
+		                display: block;
+		                font-size: larger;
+		                font-family: DFKai-sb;
+		                background-color: #031d4c;
+		                border-radius: 15px;
+		                position: absolute;
+		                color: white;
+		            }
+				 /*內文欄*/
+		            h2{
+		                display: block;
+		                border-radius: 8px;
+		                background: rgba(217, 217, 217, 0.50);
+		                height: 300px;
+		                flex-shrink: 0;
+		                position: relative;
+		                width: 1100px;
+		                border-radius: 8px;
+		            }
+		}
+	}
 
             .flip-container {
                 perspective: 231px;
@@ -154,15 +230,15 @@
     </head>
     <body>
         <header>
-            <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" style = width:150px;position:absolute;top:50px;left:50px;>
+            <input onclick="location.href='index.html'" type = "image" src = "https://i.imgur.com/0pxgq0D.jpg"  style = width:150px;position:absolute;top:50px;left:50px;>
         </header>
-        <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b1 style = width:141px;height:54px;>
-            塔羅介紹
+        <button type="button"value="連結名稱" onclick="location.href='塔羅牌介紹.html'" class = b1 style = width:141px;height:54px;>
+            塔羅牌介紹
         </button>
-        <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b2 style = width:141px;height:54px;>
-            歷史
+        <button type="button"value="連結名稱" onclick="location.href='塔羅歷史.html'" class = b2 style = width:141px;height:54px;>
+            塔羅歷史
         </button>
-        <button type="button"value="連結名稱" onclick="location.href='要前往的網頁連結'" class = b3 style = width:141px;height:54px;>
+        <button type="button"value="連結名稱" onclick="location.href='關於我們.html'" class = b3 style = width:141px;height:54px;>
             關於我們
         </button>
         
@@ -179,7 +255,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/0.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="0.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:愚者<br>愚者是一位天真無邪的冒險家，即將展開一趟重要旅程。他抱持著滿腦子希望，是十足的理想主義，也非常不切實際。</p>
@@ -193,7 +269,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/1.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="1.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:魔術師<br>作為地球與天堂的連通管道，魔術師代表了抉擇與創造，牌面上，魔術師的上方與下方皆是盛開的玫瑰與百合花，這告訴了我們，只要對自己熱愛的事物投注全部熱情，生命必能展露它的美好。</p>
@@ -207,7 +283,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/2.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="2.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:女祭司<br>女祭司代表神聖女性法則：在古代，她代表女教皇、童女女祭司，她身上披著藍白相襯的長袍，就是這個身分的象徵。</p>
@@ -221,7 +297,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/3.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="3.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:皇后<br>皇后是大地聖母的原型，是創造力與豐盛的象徵。她的盾牌上有一個金星符號，在占星學上對應金星，而其同源字「Venus」維納斯，就是羅馬神祇中掌管愛情的女神。</p>
@@ -235,7 +311,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/4.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="4.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:皇帝<br>皇帝是父親的原型，男性權力與陽剛氣概的一個象徵。他的鬍鬚顯示出他是一位成熟而有智慧的男人，也是塔羅牌中另一位蓄鬍人士〈隱者〉的前導人物。</p>
@@ -249,7 +325,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/5.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="5.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:教皇<br>教皇牌面上，呈現的是一位正統宗教人物。他頭上戴著皇冠，手中握著權杖，為兩位跪在他面前的求道者做出賜福的手勢。他是天主教信仰的領袖，象徵團結一體。</p>
@@ -265,7 +341,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/6.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="6.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:戀人<br>在伊甸園中，一切看似完美，但夏娃與亞當才剛開始要相互認識，一起學會「愛」的課題。自此，我們知道蛇會引誘夏娃吃知識果，而這對戀人的關係，將從此改變。</p>
@@ -279,7 +355,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/7.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="7.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:戰車<br>他的身後是城堡與護城河，他即將動身出發；帶著堅毅的決心與自制力，駕著戰車持續前進，成功達成他的任務。</p>
@@ -293,7 +369,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/8.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="8.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:力量<br>獅子代表激情與本能，女性則代表文明禮教，儘管她身處險境，依然無所畏懼。她心平氣和地與獅子溝通；並沒有否認獅子的兇猛力量。</p>
@@ -307,7 +383,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/9.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="9.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:隱者<br>提燈內，有一顆發光的星星，像是在指引他前方的去路。隱者需要讓自己暫時隱居起來，保持緘默和謹慎，如此他才能進行思考與計畫。</p>
@@ -321,7 +397,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/10.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="10.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:命運之輪<br>藍色的天空懸著一個輪子，四周被雲朵包圍，上下側共有三隻動物和一位帶翼的天使，這個輪子象徵希望、清明，以及在靈修道路上有所突破進展。滾動的輪子即是命運的輪轉，一切都在神聖法則的掌理之中。</p>
@@ -335,7 +411,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/11.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="11.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:正義<br>牌面上這位女性坐在一個慶典儀式舞台的正中間，兩側各有一根石柱。她是法官，也是四美德之一「正義」的擬人化人物，手持傳統的法律象徵器物——右手握著一把直立的劍，左手提著天秤。</p>
@@ -351,7 +427,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/12.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="12.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:吊人<br>吊人被繩子綁得很牢靠，看起來他似乎知道自己並不會從樹上摔下來。他安然懸宕於半空中，安心等待命運的安排。</p>
@@ -365,7 +441,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/13.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="13.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:死神<br>祂並非象徵 一個人此刻或未來即將面臨的肉體的死亡。祂是預示一個時代的結束，無益之物將被清除，新的階段才得以展開。沒有祂，我們便無法清楚看見新的可能。</p>
@@ -379,7 +455,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/14.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="14.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:節制<br>岸青翠、鬱鬱蔥蔥，黃色的鳶尾花正在綻放，象徵希望。天使正在調和兩個杯子的水，營造出一種和諧均勻的流動狀態，一個新世界於焉而生。</p>
@@ -393,7 +469,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/15.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="15.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:惡魔<br>惡魔的牌面上，山羊神蹲踞之處陰暗漆黑，像洞穴一般。所有人都身處邪惡黑暗之中，除了祂左手上的火把透露光明。</p>
@@ -407,7 +483,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/16.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="16.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:塔<br>塔標誌著覺醒的起點。在大秘儀的順序中，塔在惡魔後面，假如這位惡魔自尊心很強，非常自我傲慢，那麼塔就代表著從恩典之中墜落。</p>
@@ -421,7 +497,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/17.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="17.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:星星<br>牌面上的女性與大自然融為一體，她是大地女神的化身，呈現純潔和真實之姿，連結了宇宙本體與神聖本性。在她上方有八顆星，其中最大的一顆就是引導星——星星牌象徵著希望與指引。</p>
@@ -437,7 +513,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/18.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="18.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:月亮<br>月亮是一張帶有雙重性格以及充滿不安情緒的牌。你可以看到牌面中央有兩座塔和兩隻正在咆哮的動物。其中一隻看起來像家犬，另一隻像野犬，也可能是狼。這代表了我們內在的兩個相反面向的衝突。</p>
@@ -451,7 +527,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/19.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="19.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:太陽<br>現在的我們像個孩子，看見這個世界的光明，並且已經準備出發，抵達最後的終點世界，然後再次輪迴轉生，回到最初的愚者。</p>
@@ -479,7 +555,7 @@
                         <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img src="C:/Users/陳柏妤/OneDrive/Desktop/塔羅網站/Screenshots/21.png" alt="照片" style=display:block;width:150;height:231;>
+                                    <img src="21.png" alt="照片" style=display:block;width:150;height:231;>
                                 </div>
                                 <div class="flip-card-back">
                                     <p style=display:block;width:150;height:231;background:white;>牌面名稱:世界<br>中間的舞者也就是第一張牌「愚者」。從卑微的起點，他展開旅程，環遊肉體與精神的世界；現在他即將回到自己的 0 號牌，重新誕生。</p>
