@@ -1,101 +1,246 @@
 <html>
     <head>
-        <style>
-            /* Desktop - 1 */
+        <title>web test</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css">
+        <style type="text/css">
+            @media screen and (min-device-width: 1000px){
+                header{
+                    display: block;
+                    margin : 10px auto ;
+                    border-radius: 8px;
+                    flex-shrink: 0;
+                    background-color: #fbfbfb;
+                    opacity: 0.9;
+                    width: 100%;
+                    height: 30%;                  
+               }
+                h1{
+                    display: block;
+                    border-radius: 8px;
+                    background: rgba(97, 87, 105, 0.5);
+                    width: 40%;
+                    height: 20%;
+                    flex-shrink: 0;
+                    margin-left: 35%;
+                    margin-top: 3%;
+                    border-radius: 8px;
+                    font-family:DFKai-sb;
+                    color:#e8f1ff;
+                }
+    
+                h2{
+                    display: block;
+                    border-radius: 8px;
+                    background: rgba(97, 87, 105, 0.5);
+                    width: 70%;
+                    height: 130%;
+                    flex-shrink: 0;
+                    margin-left: 20%;
+                    margin-top: 6%;
+                    border-radius: 8px;
+                }
+                .b1{
+                    position:absolute; 
+                    top:20%;                      
+                    left:20%;
+                    display: block;
+                    width:12%;
+                    height:8%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+    
+                .b2{
+                    position:absolute; 
+                    top:20%;                      
+                    left:50%;
+                    display: block;
+                    width:12%;
+                    height:8%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+                .b3{
+                    position:absolute; 
+                    top:20%;
+                    left: 80%;
+                    display: block;
+                    width:12%;
+                    height:8%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+                .pic{
+                    display:block;
+                    position:relative;
+                    left:25%;
+                    top:10%;
+                    width:50%;
+                    height:35%;
+                }
+                /*再測一次*/
+                .again{
+                    position: relative;
+                    width:141px;
+                    height:54px;
+                    top: -20%;
+                    left: 48%;
+                    background-color:#fff;
+                    color:#000000;
+                    font-size:medium;
+                    font-family: DFKai-sb;
+                }
+            }
+            @media screen and (max-device-width: 1000px){
+                header{
+                    display: block;
+                    margin : 10px auto ;
+                    border-radius: 8px;
+                    flex-shrink: 0;
+                    background-color: #fbfbfb;
+                    opacity: 0.9;
+                    width: 100%;
+                    height: 20%;                  
+               }
+                h1{
+                    display: block;
+                    border-radius: 8px;
+                    background: rgba(97, 87, 105, 0.5);
+                    width: 40%;
+                    height: 10%;
+                    flex-shrink: 0;
+                    margin-left: 35%;
+                    margin-top: 3%;
+                    border-radius: 8px;
+                    font-family:DFKai-sb;
+                    color:#e8f1ff;
+                }
+    
+                h2{
+                    display: block;
+                    border-radius: 8px;
+                    background: rgba(97, 87, 105, 0.5);
+                    width: 80%;
+                    height: 50%;
+                    flex-shrink: 0;
+                    margin-left: 15%;
+                    margin-top: 6%;
+                    border-radius: 8px;
+                }
+                .b1{
+                    position:absolute; 
+                    top:15%;                      
+                    left:20%;
+                    display: block;
+                    width:15%;
+                    height:3%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+    
+                .b2{
+                    position:absolute; 
+                    top:15%;                      
+                    left:50%;
+                    display: block;
+                    width:15%;
+                    height:3%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+                .b3{
+                    position:absolute; 
+                    top:15%;
+                    left: 80%;
+                    display: block;
+                    width:15%;
+                    height:3%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+                .pic{
+                    display:block;
+                    position:relative;
+                    left:20%;
+                    top:10%;
+                    width:60%;
+                    height:30%;
+                }
+                /*再測一次*/
+                .again{
+                    position: relative;
+                    width:141px;
+                    height:54px;
+                    top: 80%;
+                    left: 48%;
+                    background-color:#fff;
+                    color:#000000;
+                    font-size:medium;
+                    font-family: DFKai-sb;
+                }
+            }
+            /*背景*/
             body{
-                position: relative;
-                width: 1920px;
-                height: 2122px;
-
-                background: #1B1240;
-            }
-            /* 頂部欄 */
-            .topblank{
-                width: 1920px;
-                height: 200px;
-                flex-shrink: 0;
-
-                background: #154B9C;
-            }
-
-            /* logo */
-            .logo{
-                width: 150px;
-                height: 150px;
-                flex-shrink: 0;
-
-                border-radius: 200px;
-                background: url("https://i.imgur.com/0pxgq0D.jpg"), lightgray 50% / cover no-repeat;
+                font-family: Arial, sans-serif;
+                border-radius: 144px;
+                background-color: #5DB2BD;
+                background-image:url("https://i.imgur.com/9Zwb0fC.jpg");
                 background-repeat: no-repeat;
-				background-size:cover;
-				background-position: center;
+                background-position: center center;
+                background-size: cover;
+                background-attachment: scroll;
+                font-size: 16px;
+            }
+            /*按鈕特效*/
+            button{
+                background-color: #031d4c;
+                color:#fff;
+                border:0;
+                border-radius:10px;
+                cursor:pointer;
+                font-size: larger;
+                font-family: DFKai-sb;
             }
 
-            /* 塔羅歷史 */
-            .button1{
-                position: absolute;
-                left: 200px;
-				top: 80px;
-                width: 242px;
-                height: 79px;
-                flex-shrink: 0;                
-
-                border-radius: 8px;
-                background: #1587D9;
+            button:hover{
+                color:#e8f1ff;
+                background-color:#294f91;
+                border:2px #003C9D solid;
+                outline: black solid thick;
+                cursor: pointer;
+            }
+            
+            .logo{
+                width:10%;
+                position:absolute;
+                top:5%;
+                left:5%;
+                background-size:cover;
             }
 
-            /* 塔羅牌介紹 */
-            .button2{
-                position: absolute;
-                left: 450px;
-				top: 80px;
-                width: 242px;
-                height: 79px;
-                flex-shrink: 0;
-
-                border-radius: 8px;
-                background: #1587D9;
-            }
-
-            /* 關於我們 */
-            .button3{
-                position: absolute;
-                left: 700px;
-				top: 80px;
-                width: 242px;
-                height: 79px;
-                flex-shrink: 0;
-
-                border-radius: 8px;
-                background: #1587D9;
-            }
-
-            /* 內文 */
-            .content{
-                width: 1080px;
-                height: 1727px;
-                flex-shrink: 0;
-
-                border-radius: 8px;
-                background: rgba(255, 255, 255, 0.50);
-            }
         </style>
     </head>
-
     <body>
-        <div class="topblank">
-            <div class="logo"></div>
-        </div> 
-        <button type="button" class="button1"><h2>塔羅牌歷史</h2></button>
-        <button type="button" class="button2"><h2>牌面介紹</h2></button>
-        <button type="button" class="button3"><h2>關於我們</h2></button>           
-
-        <div class="content">
-            <p>
-                塔羅的結構，起源於阿拉伯紙牌；有人說它像中國古代的「葉子戲」(一種像紙麻將的橋牌)；也有人說它是源自印度的紙牌遊戲。<br>
-先從撲克牌開始講起吧！現在最常見的撲克牌架構源自印度和伊斯蘭國家，並在14世紀中後期被傳入歐洲；至於塔羅的結構，尤其22張大塔羅、大阿爾克那、大秘儀(Major Arcana)，與歷史最接近的源由是誕生於15世紀約1420~1440年的北意大利、一種名叫il trionfos (The Triumphs)的紙牌遊戲。<br>
-從「古代塔羅」變成「現代塔羅」的分水嶺，是由16世紀間，從意大利流傳到法國等地時出現。在過去的歷史中，塔羅牌的畫面主要為不同人物或事件的塔羅皇牌(Trumps)；後來到18世紀初，馬賽塔羅牌在法國和瑞士更新了原的紙牌風貌，22張主牌，和四種元素共56張牌的78張塔羅牌現代編制架構從此開始。<br>
-            </p>
-        </div>
+        <header>
+            <input onclick="location.href='index.html'" type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" class = "logo">
+        </header>
+        <button type="button"value="連結名稱" onclick="location.href='塔羅牌介紹.html'" class = b1>
+            塔羅牌介紹
+        </button>
+        <button type="button"value="連結名稱" onclick="location.href='塔羅歷史.html'" class = b2>
+            塔羅歷史
+        </button>
+        <button type="button"value="連結名稱" onclick="location.href='關於我們.html'" class = b3>
+            關於我們
+        </button>
+        
+        <under>
+            <h1><p style=position:relative;left:35%;top:30%;font-size:100%;>塔羅歷史</p></h1>
+            <h2 style=font-family:DFKai-sb;>
+                <input type = "image" src = "圖片網址" class="pic">
+                <p style = font-family:DFKai-sb;position:relative;left:10%;margin-right:20%;top:10%;color:#e8f1ff;>解說</p>                           
+            </h2>
+        </under>
     </body>
 </html>
