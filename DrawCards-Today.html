@@ -1,0 +1,107 @@
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>DrawCard-study</title>
+        <link rel="stylesheet" href="DrawCard.css">
+    </head>
+    <header> 
+        <h1>靜心冥想，抽取三張牌</h1>
+        <h3>完成後按下底部"選好了"按鈕</h3>
+        <input type = "image" src = "https://i.imgur.com/0pxgq0D.jpg" class="logo">
+    </header>
+    <body>
+        
+            <div class="container">
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+                <div class="rt"></div>
+            </div>
+            <button type="button" id="Button" class="button">選好了</button>
+            <div class="block">
+                <p style="color: aliceblue; font-size: 20; font-family: DFKai-sb;">請選至三張牌，或將多餘的牌請再點一下放回牌面</p>
+                <div class="block9"></div>
+            </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var originalPosition = {};
+                var down=0;
+                $('.rt').mouseenter(function() {
+                    $(this).animate({ marginTop: "-50px" }, 'fast');
+                }).mouseleave(function() {
+                    $(this).animate({ marginTop: "0px" }, 'fast');
+                });
+                var down=0;
+                $('.rt').click(function() {
+                    var $clickedRectangle = $(this);
+                    var containerHeight = $('.container').height();
+                    var rectangleHeight = $clickedRectangle.height();
+                    var rectanglesAbove = $clickedRectangle.prevAll('.rt').length;
+                    $clickedRectangle.animate({ top: 300 }, 'fast');
+                    if ($(this).data('clicked')) {
+                        $(this).animate({ top: originalPosition.top }, 'fast');
+                        down--;
+                        $(this).data('clicked', false);
+                        } 
+                    else {
+                        originalPosition.top = $(this).css('top');
+                        $clickedRectangle.animate({ top: 300 }, 'fast');
+                        down++;
+                        $(this).data('clicked', true);
+                    }
+                });
+                $('#Button').click(function(event){
+                    if(down!=3)
+                    {
+                        $('.block9').slideUp();
+                    }
+                    else
+                    {
+                        $('.rt').toggleClass('rotateEffect');
+                        $('.block11').hi          
+                        setTimeout(function(){
+                            var now=new Date()
+                            var num=(now.getSeconds())%13
+                            var num=num+1
+                            if (num == 13) window.location.href = 'study13.html';
+                            else if (num == 12) window.location.href = 'study12.html';
+                            else if (num == 11) window.location.href = 'study11.html';
+                            else if (num == 10) window.location.href = 'study10.html';
+                            else if (num == 9) window.location.href = 'study9.html';
+                            else if (num == 8) window.location.href = 'study8.html';
+                            else if (num == 7) window.location.href = 'study7.html';
+                            else if (num == 6) window.location.href = 'study6.html';
+                            else if (num == 5) window.location.href = 'study5.html';
+                            else if (num == 4) window.location.href = 'study4.html';
+                            else if (num == 3) window.location.href = 'study3.html';
+                            else if (num == 2) window.location.href = 'study2.html';
+                            else if (num == 1) window.location.href = 'study1.html';
+                        }, 2000)              
+                    }
+                });
+               
+            });
+          </script>
+    </body>
+
+</html>
