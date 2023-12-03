@@ -4,31 +4,91 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css">
         <style type="text/css">
-	@media screen and (min-device-width: 1200px){	
-		body { 
-		        font-family: Arial, sans-serif;
-		        border-radius: 144px;
-		        background-color: #5DB2BD;
-		        background-image:url("https://i.imgur.com/9Zwb0fC.jpg");
-		        background-repeat: no-repeat;
-		        background-position: center center;
-		        background-size: cover;
-		        background-attachment: scroll;
-		        font-size: 16px;
-		}
+	@media screen and (min-device-width: 1200px){
+                header{
+                    display: block;
+                    margin : 10px auto ;
+                    border-radius: 8px;
+                    flex-shrink: 0;
+                    background-color: #fbfbfb;
+                    opacity: 0.9;
+                    width: 100%;
+                    height: 30%;                  
+               }
+                .b1{
+                    position:absolute; 
+                    top:20%;                      
+                    left:20%;
+                    display: block;
+                    width:12%;
+                    height:8%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+    
+                .b2{
+                    position:absolute; 
+                    top:20%;                      
+                    left:50%;
+                    display: block;
+                    width:12%;
+                    height:8%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+                .b3{
+                    position:absolute; 
+                    top:20%;
+                    left: 80%;
+                    display: block;
+                    width:12%;
+                    height:8%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
 	}
-	@media screen and (max-device-width: 700px){
-		body { 
-		        font-family: Arial, sans-serif;
-		        border-radius: 144px;
-		        background-color: #5DB2BD;
-		        background-image:url("https://i.imgur.com/9Zwb0fC.jpg");
-		        background-repeat: no-repeat;
-		        background-position: center center;
-		        background-size: cover;
-		        background-attachment: scroll;
-		        font-size: 16px;
-		}
+	@media screen and (max-device-width: 1200px){
+                header{
+                    display: block;
+                    margin : 10px auto ;
+                    border-radius: 8px;
+                    flex-shrink: 0;
+                    background-color: #fbfbfb;
+                    opacity: 0.9;
+                    width: 100%;
+                    height: 20%;                  
+               }
+                .b1{
+                    position:absolute; 
+                    top:15%;                      
+                    left:20%;
+                    display: block;
+                    width:18%;
+                    height:3%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+    
+                .b2{
+                    position:absolute; 
+                    top:15%;                      
+                    left:50%;
+                    display: block;
+                    width:18%;
+                    height:3%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
+                .b3{
+                    position:absolute; 
+                    top:15%;
+                    left: 80%;
+                    display: block;
+                    width:18%;
+                    height:3%;
+                    background-color:#031d4c;
+                    flex:105rem;
+                }
 	}
 	
             /*頂端欄*/
@@ -58,43 +118,6 @@
                 outline: black solid thick;
                 cursor: pointer;
             }
-            .b1{
-                position:absolute;            
-                top:110px;             
-                left:20%;
-                display: block;
-                font-size: larger;
-                font-family: DFKai-sb;
-                background-color: #031d4c;
-                border-radius: 15px;
-                position: absolute;
-                color: white;
-            }
-
-            .b2{
-                position:absolute;            
-                top:110px;             
-                left:50%;
-                display: block;
-                font-size: larger;
-                font-family: DFKai-sb;
-                background-color: #031d4c;
-                border-radius: 15px;
-                position: absolute;
-                color: white;
-            }
-            .b3{
-                position:absolute;            
-                top:110px;             
-                left: 80%;
-                display: block;
-                font-size: larger;
-                font-family: DFKai-sb;
-                background-color: #031d4c;
-                border-radius: 15px;
-                position: absolute;
-                color: white;
-            }
 		 /*內文欄*/
             h2{
                 display: block;
@@ -108,14 +131,11 @@
             }
             /*圖標*/
             .logo{
-                width: 40px;
-                height: 40px;
-                flex-shrink: 0;
-                border-radius: 150px;
-                background: url("https://i.imgur.com/0pxgq0D.jpg"), lightgray 50% / cover no-repeat;
-                background-repeat: no-repeat;
-		background-size:cover;
-		background-position: center;
+                width:10%;
+                position:absolute;
+                top:5%;
+                left:5%;
+                background-size:cover;
             }
 	h1{
 		style=font-family:DFKai-sb;
@@ -150,6 +170,8 @@
 		                position:absolute;            
 		                top:180px;             
 		                left:300px;
+				width:18%;
+                    		height:3%;
 		                display: block;
 		                font-size: larger;
 		                font-family: DFKai-sb;
@@ -163,6 +185,8 @@
 		                position:absolute;            
 		                top:180px;             
 		                left:600px;
+				width:18%;
+                    		height:3%;
 		                display: block;
 		                font-size: larger;
 		                font-family: DFKai-sb;
@@ -175,6 +199,8 @@
 		                position:absolute;            
 		                top:180px;             
 		                left: 900px;
+				width:18%;
+                    		height:3%;
 		                display: block;
 		                font-size: larger;
 		                font-family: DFKai-sb;
@@ -242,15 +268,15 @@
     </head>
     <body>
         <header>
-            <input onclick="location.href='index.html'" type = "image" src = "https://i.imgur.com/0pxgq0D.jpg"  style = width:150px;position:absolute;top:20px;left:30px;>
+            <input onclick="location.href='index.html'" type = "image" src = "https://i.imgur.com/0pxgq0D.jpg"  class = "logo">
         </header>
-        <button type="button"value="連結名稱" onclick="location.href='塔羅牌介紹.html'" class = b1 style = width:180px;height:40px;>
+        <button type="button"value="連結名稱" onclick="location.href='塔羅牌介紹.html'" class = b1>
             塔羅牌介紹
         </button>
-        <button type="button"value="連結名稱" onclick="location.href='塔羅歷史.html'" class = b2 style = width:180px;height:40px;>
+        <button type="button"value="連結名稱" onclick="location.href='塔羅歷史.html'" class = b2>
             塔羅歷史
         </button>
-        <button type="button"value="連結名稱" onclick="location.href='關於我們.html'" class = b3 style = width:180px;height:40px;>
+        <button type="button"value="連結名稱" onclick="location.href='關於我們.html'" class = b3>
             關於我們
         </button>
         
